@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0c5f7c;
+}
+
+/* ------common styles------ */
+
+a {
+    text-decoration: none;
+}
+
+h2 {
+    font-size: 32px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1;
+    letter-spacing: normal;
+    color: #444446;
+}
+
+/* ------------------------- */
+
+
+
+/* --------------SIGN-IN PAGE------------- */
+
+.sign-in {
+    max-width: 1440px;
+    margin: 0 auto;
+    background-image: url("../img/building.png");
+}
+
+.sign-in__wrapper {
+    height: 900px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.36);
+}
+
+.sign-in__block {
+    width: 640px;
+    padding: 40px 0;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 3px;
+    box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.5);
+    background-color: #ffffff;
+}
+
+.sign-in__img {
+    width: 150px;
+    height: 75px;
+    margin-bottom: 32px;
+}
+
+.sign-in__form {
+    width: 420px;
+}
+
+.beta {
+    margin: 5px 0 15px;
+    font-size: 12px;
+    color: #7e7e7e;
+}
+
+.sign-in__label {
+    display: block;
+    text-align: left;
+    font-size: 14px;
+    line-height: 2;
+    color: #444446;
+}
+
+.label-link {
+    float: right;
+    font-size: 14px;
+    line-height: 2;
+    color: #0c5f7c;
+}
+
+.sign-in__input {
+    width: 420px;
+    height: 44px;
+    margin-bottom: 20px;
+    border: 1px solid #444446;
+    border-radius: 3px;
+}
+
+.btn-submit {
+    width: 120px;
+    display: block;
+    margin: 8px auto 0;
+    padding: 14px 0 10px;  
+    border: solid 1px #f8650f;
+    border-radius: 3px;
+    box-shadow: 0 1px 0 0 #f8650f;
+    background-color: #ff7423;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0.35px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.sign-in__copyright {
+    font-size: 12px;
+    line-height: 1.42;
+    color: #ffffff;
+}
+
+@media screen and (max-width: 660px){
+    .sign-in__block {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 440px){
+    .sign-in__block {
+        padding: 40px 15px;
+    }
+    .sign-in__form {
+        width: 100%;
+    }
+    .sign-in__input {
+        width: 100%;
+    }
+}
