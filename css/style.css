@@ -74,6 +74,7 @@ li {
 }
 
 .header {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -106,10 +107,12 @@ li {
     color: #0c5f7c;
 }
 
-.header__button {
-    width: 96px;
-    height: 44px;
+.header__select {
     margin-left: 20px;
+}
+
+.header__button {
+    padding: 12px 16px;
     background-color: #ffffff;
     color: #ff7423;
     font-size: 16px;
@@ -123,6 +126,100 @@ li {
 .header__button:hover {
     color: #ffffff;
     background-color: #ff7423;
+}
+
+.header__icon {
+    position: absolute;
+    width: 20px;
+    right: 0;
+    cursor: pointer;
+}
+
+.header__icon-burger {
+    display: none;
+}
+
+.header__icon-closed {
+    display: none;
+}
+
+.header__select-menu {
+    display: none;
+    position: absolute;
+    top: 83px;
+    right: 0;
+    padding: 8px 0;  
+    background-color: #ffffff;
+    border-radius: 3px;
+    z-index: 1;
+    box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
+                0 3px 14px 2px rgba(0, 0, 0, 0.12), 
+                0 8px 10px 1px rgba(0, 0, 0, 0.14);
+}
+
+.header__select-block {
+    display: flex;
+    align-items: center;
+    padding: 15px 17px;
+    background-color: #ffffff;
+}
+
+.header__select-block:hover {
+    background-color: #f5f5f5;
+}
+
+.header__select-img {
+    width: 30px;
+}
+
+.header__select-text {
+    padding-left: 15px;
+    font-size: 14px;
+    line-height: 1.43;
+    color: #444446;
+}
+
+.main {
+    position: relative;
+}
+
+.mobile-menu-block {
+    position: absolute;
+    display: none;
+    width: 100%;
+    padding: 25px;
+    text-align: left;
+    border-top: 1px solid lightgray;
+    background: #ffffff;
+    left: -100%;
+}
+
+.mobile-menu-show {
+    visibility: visible;
+    left: 0;
+    transition-duration: 1s;
+}
+
+.mobile-menu-closed {
+    visibility: hidden;
+    left: -100%;
+    transition-duration: 1s;
+}
+
+.mobile-menu-list li:not(:first-child) {
+    padding-top: 22px;
+}
+
+.mobile-menu-item {
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: -0.29px;
+    color: #0c5f7c;
+}
+
+.mobile-menu-item:hover {
+    color: #ff7423;
 }
 
 .main__section {
@@ -475,6 +572,26 @@ li {
         height: 38px;
         margin-left: -19px;
         top: -19px;
+    }
+}
+
+@media screen and (max-width: 690px) {
+    .header__menu {
+        display: none;
+    }
+    .header__select {
+        margin: 0 40px 0 0;
+    }
+    .header__icon-burger,
+    .mobile-menu-block {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 690px) {
+    .header__icon-burger,
+    .mobile-menu-block {
+        display: none;
     }
 }
 
@@ -964,4 +1081,78 @@ li {
     }
 }
 
+/* ----------------OWNER-TENANT-PAGE---------------- */
 
+.tenant-wrap {
+    text-align: left;
+    background-color: #f7f8f9;
+    box-shadow: inset 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+}
+
+.tenant-container-style {
+    padding-bottom: 61px;
+}
+
+.tenant__beta {
+    padding-top: 5px;
+    font-size: 10px;
+    color: #7e7e7e;
+}
+
+.tenant-block-style {
+    margin-top: 16px;
+    padding: 16px 24px 24px;
+    background-color: #ffffff;
+    border-radius: 3px;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2),
+                0 2px 1px -1px rgba(0, 0, 0, 0.12),
+                0 1px 1px 0 rgba(0, 0, 0, 0.14);
+}
+
+.tenant-block__header {
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tenant-block__text {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.33;
+    color: #444446;
+}
+
+.tenant-block__btn {
+    padding: 14px 28px;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.25px;
+    color: #ff7423;
+    border: solid 1px #ff7423;
+    border-radius: 4px;
+    background-color: #ffffff;
+    cursor: pointer;
+}
+
+.tenant-block__btn:hover {
+    color: #ffffff;
+    background-color: #ff7423;
+}
+
+.tenant__layout {
+    width: 100%;
+    min-height: 500px;
+    border-radius: 2px;
+    background: url("../img/canada.png") 50% 50% no-repeat;
+    background-size: 100px auto;
+    background-color: #f5f5f5;
+}
+
+@media screen and (max-width: 550px){
+    .tenant-block__header {
+        flex-wrap: wrap;
+    }
+    .tenant-block__text {
+        margin-bottom: 20px;
+    }
+}
