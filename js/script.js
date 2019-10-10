@@ -12,12 +12,11 @@
         headerIconClosed = document.getElementById('header__icon-closed');
         mobileMenuBlock = document.getElementById('mobile-menu-block');
 
-        document.body.addEventListener('click', hideMenu);
-        signInBtn.addEventListener('click', showMenu);
-
         headerIconBurger.addEventListener('click', showMobileList);
         headerIconClosed.addEventListener('click', closedMobileList);
 
+        document.body.addEventListener('click', hideMenu);
+        signInBtn.addEventListener('click', showMenu);
     });
 
     function showMenu() {
