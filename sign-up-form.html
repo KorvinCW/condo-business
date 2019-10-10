@@ -28,7 +28,6 @@
                         <input type="text" class="sing-up__input input-max-width required-input" name="name" id="condo" required>
                         <p class="required-text">This field is mandatory</p>
                     </div>
-
                     <div class="province-block">
                         <label for="province" class="sing-up__label">Province<span class="required-symbol">*</span></label>
                         <select name="province" class="sign-up__select" id="province" required>
@@ -38,22 +37,22 @@
                         </select>
                         <p class="required-text">This field is mandatory</p>
                     </div>
-
                     <div class="website-block">
                         <label for="website" class="sing-up__label">Website</label>
                         <input type="url" value="http://" class="sing-up__input input-max-width" name="website" id="website">
                     </div>
-
                     <div class="choose-logo-block">
                         <p class="sing-up__label">Avatar or Logo</p>
-                        <label for="uploaded-file" class="choose-label-style choose-disabled-style">Choose file</label>
-                        <input type="file" class="choose-hide-input" name="file" id="uploaded-file">
+                        <div class="choose-logo__file">
+                            <label for="uploaded-file" class="choose-label-style">Choose file</label>
+                            <input type="file" class="choose-hide-input" name="file" id="uploaded-file">
+                            <p class="choose-logo__file-info">No file choosen</p>
+                        </div>
                         <p class="choose-logo__text">
                             Maximum upload file size is 5 Mb. Allowed file extensions: png, jpeg, jpg, tiff, gif, pdf
                         </p>
                         <p class="maximum-upload-file">Maximum upload file size is 5 Mb.</p>
                     </div>
-
                     <div>
                         <p class="sing-up__label">Position<span class="required-symbol">*</span></p>
                         <div class="position-block">
@@ -67,19 +66,16 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="email-block">
                         <label for="email" class="sing-up__label">Email<span class="required-symbol">*</span></label>
                         <input type="email" class="sing-up__input required-input" name="email" id="email" required>
                         <p class="required-text">Please enter the correct email address</p>
                     </div>
-
                     <div class="phone-block">
                         <label for="tel" class="sing-up__label">Work phone<span class="required-symbol">*</span></label>
                         <input type="tel" class="sing-up__input required-input" name="work phone" id="tel" required>
                         <p class="required-text">Please enter the correct phone number</p>
                     </div>
-
                     <div class="checkbox-block">
                         <input type="checkbox" class="sing-up__checkbox-input" name="checkbox agree" id="checkbox-agree" required>
                         <label for="checkbox-agree" class="sing-up__checkbox-label">
@@ -87,7 +83,6 @@
                             and <a href="#">Terms of Service</a><span class="required-symbol">*</span>
                         </label>
                     </div>
-
                     <input type="submit" class="sign-up__submit btn-fill-style" value="SUBMIT">
                 </form>
             </main>
