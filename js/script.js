@@ -12,6 +12,7 @@
         headerIconClosed = document.getElementById('header__icon-closed');
         mobileMenuBlock = document.getElementById('mobile-menu-block');
 
+        document.body.addEventListener('click', hideMenu);
         signInBtn.addEventListener('click', showMenu);
 
         headerIconBurger.addEventListener('click', showMobileList);
@@ -21,20 +22,27 @@
 
     function showMenu() {
         headerSelectMenu.style.display = 'block';
+        event.stopPropagation();
+    }
+
+    function hideMenu() {
+        const target = event.target;
+        const mainSelectMenuBlock = target.closest('.header__select-menu');
+
+        if (mainSelectMenuBlock !== headerSelectMenu && headerSelectMenu.style.display === 'block') {
+            headerSelectMenu.style.display = 'none';
+        }
     }
 
     function showMobileList() {
-        mobileMenuBlock.classList.remove('mobile-menu-closed');
-        mobileMenuBlock.classList.add('mobile-menu-show');
+        mobileMenuBlock.classList.toggle('mobile-menu-toggle');
         headerIconBurger.style.display = 'none';
         headerIconClosed.style.display = 'block';
     }
 
     function closedMobileList() {
-        mobileMenuBlock.classList.remove('mobile-menu-show');
-        mobileMenuBlock.classList.add('mobile-menu-closed'); 
+        mobileMenuBlock.classList.toggle('mobile-menu-toggle');
         headerIconClosed.style.display = 'none';
         headerIconBurger.style.display = 'block';
     }
-
 }) ();
