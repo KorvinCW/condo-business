@@ -336,7 +336,7 @@ li {
 }
 
 .services__info_wrap {
-    width: 368px;
+    max-width: 368px;
     margin: 15px;
     padding: 24px;
     border-radius: 2px;
@@ -347,7 +347,6 @@ li {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    flex-wrap: wrap;
 }
 
 .services__info_img {
@@ -586,6 +585,16 @@ li {
     }
 }
 
+@media screen and (max-width: 825px) {
+    .services__info {
+		flex-wrap: wrap;
+	}
+	.services__info_wrap {
+		max-width: 100%;
+		margin: 15px 0;
+    }
+}
+
 @media screen and (max-width: 730px) {
     .how-it-works__video {
         width: 100%;
@@ -599,10 +608,6 @@ li {
 @media screen and (max-width: 700px) {
     .services__info {
         display: block;
-    }
-    .services__info_wrap {
-        width: 100%;
-        margin: 15px 0;
     }
     .cervices__info_btn {
         width: 180px;
