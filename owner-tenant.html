@@ -13,14 +13,26 @@
         <header class="header container">
             <a href="index.html"><img src="img/logo_tmp.png" class="header__logo" title="logo"></a>
             <nav class="header__menu">
-                <ul class="header__list">
-                    <li><a href="index.html">HOME PAGE</a></li>
-                    <li><a href="owner-tenant.html">OWNER TENANT PAGE</a></li>
-                    <li><a href="sign-in.html">SIGN IN</a></li>
-                    <li><a href="sign-up-form.html">SIGN UP</a></li>
-                    <li><a href="#">contractors</a></li>
-                </ul>
-            </nav>
+                    <ul class="header__list">
+                        <li><a href="index.html">HOME PAGE</a></li>
+                        <li>
+                            <a href="owner-tenant.html">OWNER TENANT PAGE</a>
+                            <ul class="header__menu-submenu">
+                                <li><a href="index.html">HOME PAGE 1</a></li>
+                                <li><a href="index.html">HOME PAGE 2</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="sign-in.html">SIGN IN</a>
+                            <ul class="header__menu-submenu">
+                                <li><a href="index.html">HOME PAGE 1</a></li>
+                                <li><a href="index.html">HOME PAGE 2</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="sign-up-form.html">SIGN UP</a></li>
+                        <li><a href="#">contractors</a></li>
+                    </ul>
+                </nav>
             <div class="header__owner-menu">
                 <p class="header__owner-greeting">Hi, Constantine Constantinopolsky</p>
                 <a href="#" class="header__owner-log-out">Log Out</a>
@@ -31,8 +43,20 @@
         <main class="tenant-wrap">
             <nav class="mobile-menu-block" id="mobile-menu-block">
                 <ul class="mobile-menu-list">
-                    <li><a class="mobile-menu-item" href="index.html">HOME PAGE</a></li>
-                    <li><a class="mobile-menu-item" href="owner-tenant.html">OWNER TENANT PAGE</a></li>
+                    <li>
+                        <a class="mobile-menu-item" id="mobile-menu-item" href="#">HOME PAGE</a>
+                        <ul class="mobile-menu-submenu">
+                            <li><a class="mobile-menu-item" href="index.html">HOME PAGE 1</a></li>
+                            <li><a class="mobile-menu-item" href="index.html">HOME PAGE 2</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="mobile-menu-item" href="owner-tenant.html">OWNER TENANT PAGE</a>
+                        <ul class="mobile-menu-submenu">
+                            <li><a class="mobile-menu-item" href="index.html">HOME PAGE 1</a></li>
+                            <li><a class="mobile-menu-item" href="index.html">HOME PAGE 2</a></li>
+                        </ul>
+                    </li>
                     <li><a class="mobile-menu-item" href="sign-in.html">SIGN IN</a></li>
                     <li><a class="mobile-menu-item" href="sign-up-form.html">SIGN UP</a></li>
                     <li><a class="mobile-menu-item" href="#">contractors</a></li>

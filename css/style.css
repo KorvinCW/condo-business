@@ -160,7 +160,7 @@ li {
     letter-spacing: -0.25px;
 }
 
-.header__list li:not(:first-child) {
+.header__list > li:not(:first-child) {
     margin-top: 10px;
     margin-left: 24px;
 }
@@ -175,6 +175,35 @@ li {
 
 .header__list a:hover {
     color: #ff7423;
+}
+
+.header__list > li{
+    position: relative;
+}
+
+.header__menu-submenu {
+    min-width: 250px;
+    display: none;
+    position: absolute;
+    left: -20px;
+    padding: 30px 10px 10px;
+    background-color: #ffffff;
+    border-radius: 3px;
+    text-align: left;
+    z-index: 2;
+}
+
+.header__menu-submenu li {
+    margin: 0 10px 10px 10px;
+}
+
+.header__list > li:hover .header__menu-submenu {
+    display: block;
+}
+
+.header__list > a {
+    background-color: #0088cc;
+    color: white;
 }
 
 .header__select {
@@ -311,7 +340,7 @@ li {
             transition-duration: 1s;
 }
 
-.mobile-menu-list li:not(:first-child) {
+.mobile-menu-list > li:not(:first-child) {
     padding-top: 22px;
 }
 
@@ -327,6 +356,20 @@ li {
     color: #ff7423;
 }
 
+.mobile-menu-submenu {
+    margin-top: 10px;
+    margin-left: 24px;
+}
+
+.mobile-menu-submenu > li {
+    position: relative;
+    margin-top: 10px;
+}
+
+.mobile-menu-submenu > li > a {
+    font-size: 16px;
+}
+
 .main__section {
     color: #ffffff;
     background: url("../img/main-img.jpeg") 50% 100% no-repeat;
@@ -336,10 +379,10 @@ li {
 
 .dimming-background {
     padding: 56px 0 59px;
-    background: -webkit-gradient(linear, left bottom, left top, from(rgba(103, 97, 169, 0.2)), 
-                                        to(rgba(61, 38, 29, 0.62)));
     background: -o-linear-gradient(bottom, rgba(103, 97, 169, 0.2), 
                                         rgba(61, 38, 29, 0.62));
+    background: -webkit-gradient(linear, left bottom, left top, from(rgba(103, 97, 169, 0.2)), 
+                                        to(rgba(61, 38, 29, 0.62)));
     background: linear-gradient(to top, rgba(103, 97, 169, 0.2), 
                                         rgba(61, 38, 29, 0.62));
 }
